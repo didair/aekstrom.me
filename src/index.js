@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
+
+// Containers
+import App from 'containers/App';
+
+// Load external CSS deps
+import '@dracula/dracula-ui/styles/dracula-ui.css';
+
+// App specific CSS
+import 'styles/index.scss';
+import 'styles/site.scss';
 
 ReactDOM.render(
 	<React.StrictMode>
-		Hello world!
-  </React.StrictMode>,
+		<header>header</header>
+		<App />
+	</React.StrictMode>,
 	document.getElementById('root')
 );
 
