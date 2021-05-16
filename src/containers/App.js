@@ -1,14 +1,23 @@
 import React from 'react';
 
-import { Heading, Paragraph, List } from '@dracula/dracula-ui';
+import { Heading, Paragraph, List, Avatar } from '@dracula/dracula-ui';
 
 const App = (props) => {
 	return (
 		<main>
 			<section>
-				<Heading size="2xl" color="cyanGreen">
-					Andreas Ekström
-				</Heading>
+				<div className="df aic mb-4">
+					<Avatar
+						title="Someones face... Could it be mine?"
+						src="/assets/face.jpg"
+					/>
+
+					<div className="ml-4">
+						<Heading size="2xl" color="cyanGreen">
+							Andreas Ekström
+						</Heading>
+					</div>
+				</div>
 
 				<Paragraph>
 					TODO: Add something braggy right here
@@ -16,9 +25,11 @@ const App = (props) => {
 			</section>
 
 			<section>
-				<Heading size="xl" color="cyanGreen">
-					Get in touch?
-				</Heading>
+				<div className="mb-4">
+					<Heading size="xl" color="cyanGreen">
+						Get in touch?
+					</Heading>
+				</div>
 
 				<Paragraph>
 					I would love to!
