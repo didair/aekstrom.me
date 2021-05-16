@@ -4,7 +4,7 @@ import { Heading, Paragraph, List, Avatar } from '@dracula/dracula-ui';
 
 const App = (props) => {
 	return (
-		<main>
+		<main className="df jcc fc">
 			<section>
 				<div className="df aic mb-4">
 					<Avatar

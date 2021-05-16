@@ -10,6 +10,34 @@
 	align-items: center;
 }
 
+.jcs {
+	justify-content: flex-start;
+}
+
+.jcc {
+	justify-content: center;
+}
+
+.jce {
+	justify-content: flex-end;
+}
+
+.jcb {
+	justify-content: space-between;
+}
+
+.jca {
+	justify-content: space-around;
+}
+
+.fr {
+	flex-direction: row;
+}
+
+.fc {
+	flex-direction: column;
+}
+
 // Margins
 .mt-1 { margin-top: 0.25rem; }
 .mt-2 { margin-top: 0.5rem; }
