@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import { useQuery } from 'react-query';
+// import { useQuery } from 'react-query';
 
 axios.get(`https://api.imgur.com/3/album/XldvGKy`, {
 	headers: {
@@ -11,7 +11,7 @@ axios.get(`https://api.imgur.com/3/album/XldvGKy`, {
 .then(res => console.log('response', res))
 
 const Renders = (props) => {
-	const albumId = 'XldvGKy';
+	// const albumId = 'XldvGKy';
 
 	return (
 		<div>
