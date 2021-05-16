@@ -62,3 +62,18 @@
 .mr-3 { margin-right: 0.75rem; }
 .mr-4 { margin-right: 1rem; }
 .mr-5 { margin-right: 1.25rem; }
+
+// Breakpoints
+@mixin bp($name) {
+	@if map-has-key($breakpoints, $name) {
+		@media #{inspect(map-get($breakpoints, $name))} {
+			@content;
+		}
+	}
+
+	// If the key doesn't exist in the map
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+			+ "Please make sure it is defined in `$breakpoints` map.";
+	}
+}

@@ -10,8 +10,6 @@ import '@dracula/dracula-ui/styles/dracula-ui.css';
 
 // App specific CSS
 import 'styles/index.scss';
-import 'styles/generic.scss';
-import 'styles/site.scss';
 
 ReactDOM.render(
 	<React.StrictMode>

@@ -5,10 +5,14 @@
 }
 
 main {
+	width: 90%;
 	max-width: 1200px;
-	width: 75%;
 	margin: 0 auto;
 	flex: 1;
+
+	@include bp(small) {
+		width: 75%;
+	}
 }
 
 section {
