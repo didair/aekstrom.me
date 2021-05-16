@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
+import { QueryClientProvider, QueryClient } from 'react-query';
+import { BrowserRouter as Router } from "react-router-dom";
 
 // Containers
 import App from 'containers/App';
@@ -11,10 +13,15 @@ import '@dracula/dracula-ui/styles/dracula-ui.css';
 // App specific CSS
 import 'styles/index.scss';
 
+const queryClient = new QueryClient();
+
 ReactDOM.render(
 	<React.StrictMode>
-		<header>header</header>
-		<App />
+		<Router>
+			<QueryClientProvider client={queryClient}>
+				<App />
+			</QueryClientProvider>
+		</Router>
 	</React.StrictMode>,
 	document.getElementById('root')
 );

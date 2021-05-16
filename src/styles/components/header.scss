@@ -1,0 +1,21 @@
+header {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-bottom: 4rem;
+	padding: 0.95rem 0;
+
+	@include bp(small) {
+		width: 75%;
+	}
+
+	.menu {
+		a {
+			margin-right: 1.25rem;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}

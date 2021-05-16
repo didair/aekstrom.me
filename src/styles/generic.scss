@@ -38,6 +38,14 @@
 	flex-direction: column;
 }
 
+.fnw {
+	flex-wrap: nowrap;
+}
+
+.fw {
+	flex-wrap: wrap;
+}
+
 // Margins
 .mt-1 { margin-top: 0.25rem; }
 .mt-2 { margin-top: 0.5rem; }
