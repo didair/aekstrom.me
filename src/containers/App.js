@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, Paragraph, List, Avatar } from '@dracula/dracula-ui';
+import { Heading, Paragraph, List, Avatar, Anchor } from '@dracula/dracula-ui';
 
 const App = (props) => {
 	return (
@@ -13,19 +13,39 @@ const App = (props) => {
 					/>
 
 					<div className="ml-4">
+						<Paragraph size="sm">
+							Hello! I'm
+						</Paragraph>
+
 						<Heading size="2xl" color="cyanGreen">
 							Andreas Ekström
 						</Heading>
 					</div>
 				</div>
 
-				<Paragraph>
+				<Paragraph color="red">
 					TODO: Add something braggy right here
 				</Paragraph>
 			</section>
 
 			<section>
-				<div className="mb-4">
+				<div className="mb-2">
+					<Heading size="xl" color="cyanGreen">
+						About me
+					</Heading>
+				</div>
+
+				<Paragraph>
+					I'm a senior software developer from Sweden working in the education tech industry.
+					<br /><br />
+					Total mechanical keyboard nut, Blender hobbyist & open-source advocate.
+					<br />
+					Always working on something cool!
+				</Paragraph>
+			</section>
+
+			<section>
+				<div className="mb-2">
 					<Heading size="xl" color="cyanGreen">
 						Get in touch?
 					</Heading>
@@ -36,23 +56,23 @@ const App = (props) => {
 				</Paragraph>
 
 				<List variant="unordered" color="purple">
-					<a href="https://github.com/didair" target="_blank" rel="noreferrer">
-						<li className="drac-text drac-text-white">
+					<li className="drac-text drac-text-white">
+						<Anchor href="https://github.com/didair" isExternal>
 							Github
-						</li>
-					</a>
+						</Anchor>
+					</li>
 
-					<a href="https://twitter.com/andreasekstr0m" target="_blank" rel="noreferrer">
-						<li className="drac-text drac-text-white">
+					<li className="drac-text drac-text-white">
+						<Anchor href="https://twitter.com/andreasekstr0m" isExternal>
 							Twitter
-						</li>
-					</a>
+						</Anchor>
+					</li>
 
-					<a href="https://www.instagram.com/itsandreasekstrom/" target="_blank" rel="noreferrer">
-						<li className="drac-text drac-text-white">
+					<li className="drac-text drac-text-white">
+						<Anchor href="https://www.instagram.com/itsandreasekstrom/" isExternal>
 							Instagram
-						</li>
-					</a>
+						</Anchor>
+					</li>
 
 					<Paragraph size="sm" color="red">
 						TODO: Add emojis here or something
