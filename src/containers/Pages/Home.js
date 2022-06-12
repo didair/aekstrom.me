@@ -14,6 +14,10 @@ const Home = () => {
 
 					<div className="ml-4">
 						<Paragraph size="sm">
+							<span className="emoji">
+								👋🏼
+							</span>
+
 							Hello! I'm
 						</Paragraph>
 
@@ -31,6 +35,36 @@ const Home = () => {
 			<section>
 				<div className="mb-2">
 					<Heading size="xl" color="cyanGreen">
+						<span className="emoji">
+							💼
+						</span>
+
+						Resumé
+					</Heading>
+				</div>
+
+				<List variant="unordered" color="purple">
+					<li className="drac-text drac-text-white">
+						CO-Owner at <Anchor href="https://strollysweden.com/" isExternal>Strolly</Anchor>
+					</li>
+
+					<li className="drac-text drac-text-white">
+						Frontend lead at <Anchor href="https://haldor.se/" isExternal>Haldor</Anchor>
+					</li>
+
+					<li className="drac-text drac-text-white">
+						Consulting developer for <Anchor href="https://atronstore.com/" isExternal>ATRON</Anchor>
+					</li>
+				</List>
+			</section>
+
+			<section>
+				<div className="mb-2">
+					<Heading size="xl" color="cyanGreen">
+						<span className="emoji">
+							💁🏼‍♂️
+						</span>
+
 						About me
 					</Heading>
 				</div>
@@ -47,6 +81,10 @@ const Home = () => {
 			<section>
 				<div className="mb-2">
 					<Heading size="xl" color="cyanGreen">
+						<span className="emoji">
+							💬
+						</span>
+
 						Get in touch?
 					</Heading>
 				</div>
@@ -75,7 +113,9 @@ const Home = () => {
 					</li>
 
 					<Paragraph size="sm" color="red">
-						TODO: Add emojis here or something
+						<div className="tdt">
+							TODO: Add emojis here or something // done!
+						</div>
 					</Paragraph>
 				</List>
 			</section>
