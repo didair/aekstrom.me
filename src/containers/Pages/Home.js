@@ -113,9 +113,9 @@ const Home = () => {
 					</li>
 
 					<Paragraph size="sm" color="red">
-						<div className="tdt">
+						<span className="tdt">
 							TODO: Add emojis here or something // done!
-						</div>
+						</span>
 					</Paragraph>
 				</List>
 			</section>
