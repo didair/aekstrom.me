@@ -45,7 +45,7 @@ const Renders = (props) => {
 					data.images.map(image => {
 						return <div className="render" key={image.id}>
 							<a href={image.link} target="_blank" rel="noreferrer">
-								<img src={image.link} alt={image.description} />
+								<img src={image.link} decoding="async" loading="lazy" alt={image.description} />
 							</a>
 						</div>
 					})
