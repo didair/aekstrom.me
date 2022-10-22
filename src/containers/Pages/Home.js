@@ -53,7 +53,11 @@ const Home = () => {
 					</li>
 
 					<li className="drac-text drac-text-white">
-						Consulting developer for <Anchor href="https://atronstore.com/" isExternal>ATRON</Anchor>
+						Consultant at <Anchor href="https://atronstore.com/" isExternal>ATRON</Anchor>
+					</li>
+
+					<li className="drac-text drac-text-white">
+						Contributor at <Anchor href="https://github.com/catppuccin/ui" isExternal>@catppuccin/ui</Anchor>
 					</li>
 				</List>
 			</section>
