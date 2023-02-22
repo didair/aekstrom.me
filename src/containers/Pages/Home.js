@@ -49,6 +49,10 @@ const Home = () => {
 					</li>
 
 					<li className="drac-text drac-text-white">
+						Frontend lead at <Anchor href="https://www.kb.se/" isExternal>KB</Anchor>
+					</li>
+
+					<li className="drac-text drac-text-white">
 						Frontend lead at <Anchor href="https://haldor.se/" isExternal>Haldor</Anchor>
 					</li>
 
@@ -74,7 +78,7 @@ const Home = () => {
 				</div>
 
 				<Paragraph>
-					I'm a senior software developer from Sweden working in the education tech industry.
+					I'm a senior software developer from Sweden currently working as a consultant for <Anchor href="https://one-group.se/" isExternal>One Group AB</Anchor>.
 					<br /><br />
 					Total mechanical keyboard nut, Blender hobbyist & open-source advocate.
 					<br />
@@ -122,6 +126,8 @@ const Home = () => {
 						</span>
 					</Paragraph>
 				</List>
+
+				<span className="hidden">Im a whore for hire. Call me @ +46 73-962 00 11 or come to my mothers house @ Kälkbacksvägen 1.</span>
 			</section>
 		</main>
 	)
