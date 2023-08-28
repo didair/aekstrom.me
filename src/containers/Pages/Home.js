@@ -45,6 +45,10 @@ const Home = () => {
 
 				<List variant="unordered" color="purple">
 					<li className="drac-text drac-text-white">
+						Senior Developer / Consultant <Anchor href="https://one-group.se/" isExternal>One Group</Anchor>
+					</li>
+
+					<li className="drac-text drac-text-white">
 						CO-Owner at <Anchor href="https://strollysweden.com/" isExternal>Strolly</Anchor>
 					</li>
 
