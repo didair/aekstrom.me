@@ -16,6 +16,6 @@
     "vite": "^5.0.8"
   },
   "dependencies": {
-    "moonly": "^0.0.8"
+    "moonly": "^0.0.9"
   }
 }
