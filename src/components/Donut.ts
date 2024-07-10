@@ -18,7 +18,7 @@ const range = (start: number, end: number, value: number) => {
 const render = () => {
 	const pre = document.getElementById('donut-viewport');
 	let A = 0, B = 0;
-	const width = 60, height = 30; // Adjusted width and height
+	const width = 60, height = 30;
 	const R1 = 5, R2 = 3.4, K2 = 5, K1 = width * K2 * 3 / (8 * (R1 + R2));
 
 	const renderFrame = () => {
