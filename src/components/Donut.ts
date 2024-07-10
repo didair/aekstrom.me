@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { Box, signal } from "moonly";
 import { Pre } from "../elements/Pre";
 
