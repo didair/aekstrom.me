@@ -81,8 +81,8 @@ export const Donut = () => {
 			}),
 			globalEvents: {
 				mousemove: (event: MouseEvent) => {
-					mousePositionA.value = range(1, -1, event.clientX / document.body.clientWidth);
-					mousePositionB.value = range(1, -1, event.clientY / document.body.clientWidth);
+					mousePositionA.value = range(0, -5, event.clientX / document.body.clientWidth);
+					mousePositionB.value = range(0, -5, event.clientY / document.body.clientWidth);
 				},
 			}
 		}),
