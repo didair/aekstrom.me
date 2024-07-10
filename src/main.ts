@@ -10,7 +10,7 @@ const router = new Router({
 	pages: [
 		HomePage,
 	],
-	defaultLayout: MainLayout,
+	defaultLayout: MainLayout as any,
 });
 
 initTheme();
