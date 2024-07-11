@@ -5,8 +5,8 @@ import { Pre } from "../elements/Pre";
 
 type VertexPoint = [number, number, number];
 
-const mousePositionX = signal(0);
-const mousePositionY = signal(0);
+const mousePositionX = signal(35);
+const mousePositionY = signal(-35);
 
 function degreesToRadians(degrees: number) {
 	return degrees * (Math.PI / 180);
@@ -193,6 +193,11 @@ export const Cube = () => {
 				mousemove: (event: MouseEvent) => {
 					mousePositionY.value = range(360, 0, event.clientX / document.body.clientWidth);
 					mousePositionX.value = range(360, 0, event.clientY / document.body.clientHeight);
+				},
+				touchmove: (event: TouchEvent) => {
+					const { clientX, clientY } = event.touches[0];
+					mousePositionY.value = range(360, 0, clientX / document.body.clientWidth);
+					mousePositionX.value = range(360, 0, clientY / document.body.clientHeight);
 				},
 			}
 		}),
