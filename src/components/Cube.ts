@@ -195,9 +195,12 @@ export const Cube = () => {
 					mousePositionX.value = range(360, 0, event.clientY / document.body.clientHeight);
 				},
 				touchmove: (event: TouchEvent) => {
-					const { clientX, clientY } = event.touches[0];
-					mousePositionY.value = range(360, 0, clientX / document.body.clientWidth);
-					mousePositionX.value = range(360, 0, clientY / document.body.clientHeight);
+					if (event.touches.length > 1) {
+						event.preventDefault();
+						const { clientX, clientY } = event.touches[0];
+						mousePositionY.value = range(360, 0, clientX / document.body.clientWidth);
+						mousePositionX.value = range(360, 0, clientY / document.body.clientHeight);
+					}
 				},
 			}
 		}),
