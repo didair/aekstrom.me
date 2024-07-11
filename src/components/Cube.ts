@@ -8,7 +8,21 @@ type VertexPoint = [number, number, number];
 const mousePositionX = signal(35);
 const mousePositionY = signal(-35);
 
-function degreesToRadians(degrees: number) {
+const getViewportWidth = () => {
+	// 10 width is about 70px
+	let screenMultiplier = document.body.clientWidth > 700 ? 70 : 50;
+	let width = Math.round(document.body.clientWidth / document.body.clientHeight) * 10 + screenMultiplier;
+	if (width < 25) {
+		width = 25;
+	}
+	while (width % 2) {
+		width -= 1;
+	}
+
+	return width;
+};
+
+const degreesToRadians = (degrees: number) => {
 	return degrees * (Math.PI / 180);
 }
 
@@ -87,19 +101,15 @@ function drawLine(grid, width, x1, y1, x2, y2, char) {
 
 const render = () => {
 	const pre = document.getElementById('cube-viewport');
-	// 10 width is about 70px
-	let screenMultiplier = document.body.clientWidth > 700 ? 70 : 50;
-	let width = Math.round(document.body.clientWidth / document.body.clientHeight) * 10 + screenMultiplier;
-	if (width < 40) {
-		width = 40;
-	}
-	while (width % 2) {
-		width -= 1;
-	}
-
-	const height = width / 2;
+	let width = getViewportWidth();
+	let height = width / 2;
 	const fov = 1.5;
 	const viewerDistance = 3.5;
+
+	window.addEventListener('resize', () => {
+		width = getViewportWidth();
+		height = width / 2;
+	});
 
 	// box rotation
 	const angles = {
