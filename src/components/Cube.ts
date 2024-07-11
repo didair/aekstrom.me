@@ -218,5 +218,9 @@ export const Cube = () => {
 				},
 			},
 		}),
+		Box({
+			class: 'touch-only font-mono absolute bottom-4 text-sm text-gray-600 dark:text-gray-400',
+			children: 'Use two fingers to rotate cube :)'
+		}),
 	];
 };
