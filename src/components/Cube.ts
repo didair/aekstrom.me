@@ -88,7 +88,8 @@ function drawLine(grid, width, x1, y1, x2, y2, char) {
 const render = () => {
 	const pre = document.getElementById('cube-viewport');
 	// 10 width is about 70px
-	let width = Math.round(document.body.clientWidth / document.body.clientHeight) * 10 + 70;
+	let screenMultiplier = document.body.clientWidth > 700 ? 70 : 50;
+	let width = Math.round(document.body.clientWidth / document.body.clientHeight) * 10 + screenMultiplier;
 	if (width < 40) {
 		width = 40;
 	}
