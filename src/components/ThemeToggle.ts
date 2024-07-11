@@ -3,7 +3,7 @@ import { toggleTheme } from "../theme";
 
 export const ThemeToggle = () => {
 	return Box({
-		class: "w-8 h-5 border border-purple-950 dark:border-yellow-300 rounded-full flex items-center",
+		class: "w-8 h-5 border border-purple-950 dark:border-yellow-300 rounded-full flex items-center cursor-pointer",
 		style: "padding: 2px;",
 		events: {
 			click: toggleTheme,

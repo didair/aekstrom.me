@@ -1,5 +1,4 @@
 import { Box, Page } from "moonly";
-// import { Donut } from "../components/Donut";
 import { Cube } from "../components/Cube";
 
 class HomePage extends Page {
