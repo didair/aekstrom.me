@@ -11,3 +11,13 @@ body {
 html.dark .pill {
 	transform: translateX(calc(100% - 2px));
 }
+
+.touch-only {
+	display: none;
+}
+
+@media (hover: none) {
+	.touch-only {
+		display: block;
+	}
+}
