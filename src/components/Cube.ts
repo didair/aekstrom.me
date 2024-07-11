@@ -87,7 +87,15 @@ function drawLine(grid, width, x1, y1, x2, y2, char) {
 
 const render = () => {
 	const pre = document.getElementById('cube-viewport');
-	const width = 50;
+	// 10 width is about 70px
+	let width = Math.round(document.body.clientWidth / document.body.clientHeight) * 10 + 70;
+	if (width < 40) {
+		width = 40;
+	}
+	while (width % 2) {
+		width -= 1;
+	}
+
 	const height = width / 2;
 	const fov = 1.5;
 	const viewerDistance = 3.5;
@@ -184,7 +192,7 @@ export const Cube = () => {
 			globalEvents: {
 				mousemove: (event: MouseEvent) => {
 					mousePositionY.value = range(360, 0, event.clientX / document.body.clientWidth);
-					mousePositionX.value = range(360, 0, event.clientY / document.body.clientWidth);
+					mousePositionX.value = range(360, 0, event.clientY / document.body.clientHeight);
 				},
 			}
 		}),
