@@ -8,6 +8,8 @@ export const ThemeToggle = () => {
 		class: "w-8 h-5 border border-purple-950 dark:border-yellow-300 rounded-full flex items-center cursor-pointer",
 		style: "padding: 2px;",
 		tabIndex: 0,
+		'aria-label': "Toggle light and dark theme",
+		'role': 'button',
 		events: {
 			click: toggleTheme,
 			keydown: (event: KeyboardEvent) => {
