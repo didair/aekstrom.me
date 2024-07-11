@@ -184,7 +184,7 @@ export const Cube = () => {
 			globalEvents: {
 				mousemove: (event: MouseEvent) => {
 					mousePositionY.value = range(360, 0, event.clientX / document.body.clientWidth);
-					mousePositionX.value = range(0, 360, event.clientY / document.body.clientWidth);
+					mousePositionX.value = range(360, 0, event.clientY / document.body.clientWidth);
 				},
 			}
 		}),
