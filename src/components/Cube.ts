@@ -198,6 +198,7 @@ export const Cube = () => {
 				touchmove: (event: TouchEvent) => {
 					if (event.touches.length > 1) {
 						event.preventDefault();
+						event.stopPropagation();
 						const { clientX, clientY } = event.touches[0];
 						mousePositionY.value = range(360, 0, clientX / document.body.clientWidth);
 						mousePositionX.value = range(360, 0, clientY / document.body.clientHeight);
