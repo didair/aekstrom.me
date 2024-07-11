@@ -49,7 +49,6 @@ const render = () => {
 					b[o] = ".,-~:;=!*#$@"[N > 0 ? N : 0];
 				}
 			}
-		
 		}
 
 		let output = '';
