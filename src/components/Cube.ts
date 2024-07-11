@@ -189,11 +189,13 @@ const render = () => {
 		angles.y = mousePositionY.value;
 		angles.x = mousePositionX.value;
 		renderFrame();
+
+		window.requestAnimationFrame(update);
 	};
 
-	setInterval(update, 50);
+	window.requestAnimationFrame(update);
 
-	renderFrame();
+	// renderFrame();
 };
 
 export const Cube = () => {
