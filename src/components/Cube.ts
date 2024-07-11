@@ -200,11 +200,7 @@ export const Cube = () => {
 				class: 'text-xs',
 				id: 'cube-viewport',
 			}),
-			globalEvents: {
-				mousemove: (event: MouseEvent) => {
-					mousePositionY.value = range(360, 0, event.clientX / document.body.clientWidth);
-					mousePositionX.value = range(360, 0, event.clientY / document.body.clientHeight);
-				},
+			events: {
 				touchmove: (event: TouchEvent) => {
 					if (event.touches.length > 1) {
 						event.preventDefault();
@@ -214,7 +210,13 @@ export const Cube = () => {
 						mousePositionX.value = range(360, 0, clientY / document.body.clientHeight);
 					}
 				},
-			}
+			},
+			globalEvents: {
+				mousemove: (event: MouseEvent) => {
+					mousePositionY.value = range(360, 0, event.clientX / document.body.clientWidth);
+					mousePositionX.value = range(360, 0, event.clientY / document.body.clientHeight);
+				},
+			},
 		}),
 	];
 };
