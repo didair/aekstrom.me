@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { Box, Text } from "moonly";
 import { toggleTheme } from "../theme";
 
@@ -5,8 +7,14 @@ export const ThemeToggle = () => {
 	return Box({
 		class: "w-8 h-5 border border-purple-950 dark:border-yellow-300 rounded-full flex items-center cursor-pointer",
 		style: "padding: 2px;",
+		tabIndex: 0,
 		events: {
 			click: toggleTheme,
+			keydown: (event: KeyboardEvent) => {
+				if (event.code == 'Space' || event.code == 'Enter') {
+					toggleTheme();
+				}
+			},
 		},
 		children: [
 			Text({

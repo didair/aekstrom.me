@@ -101,7 +101,7 @@ function drawLine(grid, width, x1, y1, x2, y2, char) {
 
 const render = () => {
 	const pre = document.getElementById('cube-viewport');
-	let width = getViewportWidth();
+	let width = 0;
 	let height = width / 2;
 	const fov = 1.5;
 	const viewerDistance = 3.5;
@@ -110,6 +110,11 @@ const render = () => {
 		width = getViewportWidth();
 		height = width / 2;
 	});
+
+	setTimeout(() => {
+		width = getViewportWidth();
+		height = width / 2;
+	}, 50);
 
 	// box rotation
 	const angles = {
@@ -197,8 +202,9 @@ export const Cube = () => {
 			class: 'cube',
 			onMount: render,
 			children: Pre({
-				class: 'text-xs',
+				class: 'text-xs cursor-default select-none',
 				id: 'cube-viewport',
+				'aria-hidden': true,
 			}),
 			events: {
 				touchmove: (event: TouchEvent) => {
@@ -220,7 +226,8 @@ export const Cube = () => {
 		}),
 		Box({
 			class: 'touch-only font-mono absolute bottom-4 text-sm text-gray-600 dark:text-gray-400',
-			children: 'Use two fingers to rotate cube :)'
+			children: 'Use two fingers to rotate cube :)',
+			'aria-hidden': true,
 		}),
 	];
 };
